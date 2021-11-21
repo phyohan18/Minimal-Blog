@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Minimal Blog: Laravel + Tailwind</title>
+
+    <meta name="author" content="Phyo Pyae Sone Han" />
+    <meta name="description" content="If you're looking for the best laravel blog project examples to inspire you, you're on the right page." />
+    <meta name="keywords" content="minimal blog, phyo pyae sone han, phyohan" />
+
+
+    <!-- Generics -->
+    <link rel="icon" href="images/icon/icon-32.png" sizes="32x32">
+    <link rel="icon" href="images/icon/icon-128.png" sizes="128x128">
+    <link rel="icon" href="images/icon/icon-192.png" sizes="192x192">
+
+    <!-- Android -->
+    <link rel="shortcut icon" href="images/icon/icon-196.png" sizes="196x196">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="images/icon/icon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="images/icon/icon-167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="images/icon/icon-180.png" sizes="180x180">
+
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="assets/css/website_style.css" rel="stylesheet" />
+
+</head>
+
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <nav id="header" class="fixed w-full z-10 top-0">
+
+        <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+
+        <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+            <div class="pl-4">
+                <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
+                    <span class="text-green-500">Minimal </span> Blog
+                </a>
+            </div>
+
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<title>Menu</title>
+						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+					</svg>
+				</button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 z-20" id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="#">Home</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="dropdownbtn inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">Category</a>
+
+                        <!-- Dropdown list -->
+                        <div class="sub-nav opacity-0 pointer-events-none absolute py-2 mt-2 bg-white  rounded-lg shadow-xl w-44 duration-150 ease-in-out">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-green-500 hover:text-white">
+								Technology
+							</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-green-500 hover:text-white">
+								Lifestyle
+							</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-green-500 hover:text-white">
+								Fitness
+							</a>
+                        </div>
+                    </li>
+                    <li class="mr-3">
+                        <a class="modal-open inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#" onclick="return false;">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!--Container-->
+    <div id="container" class="container w-full md:max-w-3xl mx-auto pt-20">
+
+        <section class="w-full px-4  md:px-6 text-xl text-gray-800 leading-normal">
+            <article class="font-sans rounded-lg shadow-xl mb-8">
+                <!-- Article Image -->
+                <a href="#">
+                    <img class="rounded-t-lg" src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+                <div class="flex flex-col justify-start p-6">
+                    <a href="#" class="text-sm font-bold uppercase pb-4">Technology</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="text-green-500 no-underline hover:underline">David Grzyb</a>, Published on April 25th, 2020
+                    </p>
+
+                    <a href="#" class="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
+                    <div class="justify-end">
+                        <a href="page_detail.html" class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</a>
+                    </div>
+                </div>
+            </article>
+            <article class="font-sans rounded-lg shadow-xl my-8">
+                <!-- Article Image -->
+                <a href="#">
+                    <img class="rounded-t-lg" src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+                <div class="flex flex-col justify-start p-6">
+                    <a href="#" class="text-sm font-bold uppercase pb-4">Technology</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="text-green-500 no-underline hover:underline">David Grzyb</a>, Published on April 25th, 2020
+                    </p>
+
+                    <a href="#" class="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
+                    <div class="justify-end">
+                        <a href="page_detail.html" class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</a>
+                    </div>
+                </div>
+            </article>
+            <article class="font-sans rounded-lg shadow-xl my-8">
+                <!-- Article Image -->
+                <a href="#">
+                    <img class="rounded-t-lg" src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+                </a>
+                <div class="flex flex-col justify-start p-6">
+                    <a href="#" class="text-sm font-bold uppercase pb-4">Technology</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="text-green-500 no-underline hover:underline">David Grzyb</a>, Published on April 25th, 2020
+                    </p>
+
+                    <a href="#" class="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
+                    <div class="justify-end">
+                        <a href="page_detail.html" class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!--Next & Prev Links-->
+        <div class="font-sans mt-8 px-8 pb-8  flex justify-end space-x-1">
+            <a href="#" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+				Previous
+			</a>
+            <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-green-400 hover:text-white">
+				1
+			</a>
+            <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-green-400 hover:text-white">
+				2
+			</a>
+            <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-green-400 hover:text-white">
+				3
+			</a>
+            <a href="#" class="px-4 py-2 font-bold text-gray-500 bg-gray-300 rounded-md hover:bg-green-400 hover:text-white">
+				Next
+			</a>
+        </div>
+        <!--/Next & Prev Links-->
+
+        <!--Divider-->
+        <hr class="border-b-2 border-gray-400 mb-8 mx-4">
+
+
+        <!--Subscribe-->
+        <div class="container px-4 mb-8">
+            <div class="font-sans bg-gradient-to-b from-green-100 to-gray-100 rounded-lg shadow-xl p-4 text-center">
+                <h2 class="font-bold break-normal text-xl md:text-3xl">Subscribe to my Newsletter</h2>
+                <h3 class="font-bold break-normal text-gray-600 text-sm md:text-base">Get the latest posts delivered right to your inbox</h3>
+                <div class="w-full text-center pt-4">
+                    <form action="#">
+                        <div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center">
+                            <input type="email" placeholder="youremail@example.com" class="flex-1 mt-4 appearance-none border border-gray-400 rounded shadow-md p-3 text-gray-600 mr-2 focus:outline-none">
+                            <button type="submit" class="flex-1 mt-4 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /Subscribe-->
+    </div>
+    <!--/container-->
+
+    <!-- Welcome Modal -->
+    <div class="welcome modal fixed z-10 inset-0 overflow-y-auto opacity-0 pointer-events-none" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 ">
+            <div class="welcome-modal-overlay fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div class=" select-text flex-initial inline-block bg-white text-left overflow-hidden shadow-xl transform transition-all align-baseline sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full modal-style">
+                <div class="flex h-full">
+                    <a class="modal-close back-btn">
+                        <i class="fas fa-times fa-sm"></i>
+                    </a>
+                    <div class="items-start w-1/2 bg-green-500 modal-my-photo"></div>
+                    <div class="items-end w-1/2 bg-white h-auto items-center p-10 flex flex-col ">
+                        <div class="title">Howdy!</div>
+                        <div class="paragraph">
+                            Thank you so much for getting here! I’m Phyo Pyae Sone Han, creator and maintainer of Minimal Blog. I’d really love to get in touch with you to hear your feedback or just say hello! 😃
+                        </div>
+                        <div class="uppercase font-bold mb-4 rmt-text">reach me on</div>
+                        <div class="flex">
+                            <a href="mailto:phyohan1234@gmail.com" target="_blank" class="button flex justify-center">
+                                <i class="fas fa-envelope fa-sm"></i>
+                            </a>
+                            <a href="https://www.instagram.com/phyo_han_ig" target="_blank" class="button flex justify-center">
+                                <i class="fab fa-instagram fa-sm"></i>
+                            </a>
+                            <a href="https://www.phyopyaesonehan.xyz" target="_blank" class="button flex justify-center">
+                                <i class="fas fa-globe fa-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Welcome modal -->
+
+    <!-- Login Modal -->
+    <div class="login modal opacity-0 z-10 inset-0 pointer-events-none fixed w-full h-full flex items-center justify-center">
+        <div class="login-modal-overlay fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+        <!--Body-->
+        <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-14 shadow-lg z-50 overflow-y-auto">
+            <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-md w-full space-y-8">
+                    <div>
+                        <h2 class="mt-0 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+                    </div>
+                    <form class="mt-8 space-y-6" action="admin_dashboard/index.html" method="POST">
+                        <input type="hidden" name="remember" value="true" />
+                        <div class="rounded-md shadow-sm -space-y-px">
+                            <div>
+                                <label for="email-address" class="sr-only">Email address</label>
+                                <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                                    placeholder="Email address" />
+                            </div>
+                            <div>
+                                <label for="password" class="sr-only">Password</label>
+                                <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                                    placeholder="Password" />
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded" />
+                                <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                            </div>
+
+                            <div class="text-sm">
+                                <a href="#" class="font-medium text-green-500 hover:underline">Forgot your password?</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                <span class="absolute left-0 inset-y-0 flex items-center pl-3" >
+                                <!-- Heroicon name: solid/lock-closed -->
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                                </svg>
+                                </span>
+                                Sign in
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /login modal -->
+
+    <footer class="bg-white border-t border-gray-400 shadow">
+        <div class="container max-w-4xl mx-auto flex py-8">
+
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full md:w-1/2 ">
+                    <div class="px-8">
+                        <h3 class="font-bold text-gray-900">About</h3>
+                        <p class="py-4 text-gray-600 text-sm">
+                            If you're looking for the best laravel blog project examples to inspire you, you're on the right page.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex w-full md:w-1/2">
+                    <div class="px-8">
+                        <h3 class="font-bold text-gray-900">Developers</h3>
+                        <ul class="list-reset items-center text-sm pt-3">
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="#">Blog API</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/7d163d37d6.js" crossorigin="anonymous"></script>
+    <script>
+        /* Progress bar */
+        //Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+        var h = document.documentElement,
+            b = document.body,
+            st = "scrollTop",
+            sh = "scrollHeight",
+            progress = document.querySelector("#progress"),
+            scroll;
+        var scrollpos = window.scrollY;
+        var header = document.getElementById("header");
+        var navcontent = document.getElementById("nav-content");
+
+        document.addEventListener("scroll", function() {
+            /*Refresh scroll % width*/
+            scroll = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+            progress.style.setProperty("--scroll", scroll + "%");
+
+            /*Apply classes for slide in bar*/
+            scrollpos = window.scrollY;
+
+            if (scrollpos > 10) {
+                header.classList.add("bg-white");
+                header.classList.add("shadow");
+                navcontent.classList.remove("bg-gray-100");
+                navcontent.classList.add("bg-white");
+            } else {
+                header.classList.remove("bg-white");
+                header.classList.remove("shadow");
+                navcontent.classList.remove("bg-white");
+                navcontent.classList.add("bg-gray-100");
+            }
+        });
+
+        //Javascript to toggle the menu
+        document.getElementById("nav-toggle").onclick = function() {
+            document.getElementById("nav-content").classList.toggle("hidden");
+        };
+
+        //Javascript to toggle the welcome modal on page load
+
+        window.onload = function() {
+            setTimeout(function() {
+                toggleWelcomeModal();
+            }, 500);
+        };
+
+        // The welcome modal will close when the user clicks upon the overlay
+
+        const overlay_welcome = document.querySelector(".welcome-modal-overlay");
+        overlay_welcome.addEventListener("click", toggleWelcomeModal);
+
+        const closemodal = document.querySelector(".modal-close");
+        closemodal.addEventListener("click", toggleWelcomeModal);
+
+        function toggleWelcomeModal() {
+            const modal = document.querySelector(".welcome");
+            modal.classList.toggle("opacity-0");
+            modal.classList.toggle("pointer-events-none");
+        }
+
+        //Javascript to toggle the Drop Down Menu
+
+        const element = document.querySelector(".dropdownbtn");
+        element.addEventListener("click", function(event) {
+            event.preventDefault();
+            toggleDropdown();
+        });
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches(".dropdownbtn")) {
+                let openDropdown = document.querySelector(".sub-nav");
+                if (!openDropdown.classList.contains("opacity-0")) {
+                    toggleDropdown();
+                }
+            }
+        };
+
+        function toggleDropdown() {
+            const subnav = document.querySelector(".sub-nav");
+            subnav.classList.toggle("opacity-0");
+            subnav.classList.toggle("pointer-events-none");
+        }
+
+        //Javascript to toggle the login modal on page load
+
+        const openmodal = document.querySelector(".modal-open");
+        openmodal.addEventListener("click", function(event) {
+            event.preventDefault();
+            toggleModal();
+        });
+
+        const overlay_login = document.querySelector(".login-modal-overlay");
+        overlay_login.addEventListener("click", toggleModal);
+
+        function toggleModal() {
+            const modal = document.querySelector(".login");
+            modal.classList.toggle("opacity-0");
+            modal.classList.toggle("pointer-events-none");
+        }
+    </script>
+
+</body>
+
+</html>

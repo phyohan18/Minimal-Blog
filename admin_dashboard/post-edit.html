@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Welcome To Minimal Dashboard</title>
+
+
+    <!-- Generics -->
+    <link rel="icon" href="../images/icon/icon-32.png" sizes="32x32">
+    <link rel="icon" href="../images/icon/icon-128.png" sizes="128x128">
+    <link rel="icon" href="../images/icon/icon-192.png" sizes="192x192">
+
+    <!-- Android -->
+    <link rel="shortcut icon" href="../images/icon/icon-196.png" sizes="196x196">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="../images/icon/icon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="../images/icon/icon-167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="../images/icon/icon-180.png" sizes="180x180">
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/icon8/css/line-awesome.min.css">
+    <link href="../assets/css/filepond.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+
+        <!-- Menu Toggler -->
+        <button type="button" class="menu-toggler la la-bars" data-toggle="menu"></button>
+
+        <!-- Brand -->
+        <span class="brand"><img src="../images/icon/icon-32.png" alt="Logo"></span>
+
+        <!-- Search -->
+        <form class="hidden md:block ltr:ml-10 rtl:mr-10" action="#">
+            <label class="form-control-addon-within rounded-full">
+                <input type="text" class="form-control border-none" placeholder="Search">
+                <button type="button"
+                    class="btn btn-link text-gray-300 dark:text-gray-700 hover:text-primary dark:hover:text-primary text-xl leading-none la la-search ltr:mr-4 rtl:ml-4"></button>
+            </label>
+        </form>
+
+        <!-- Right -->
+        <div class="flex items-center ltr:ml-auto rtl:mr-auto">
+
+            <!-- Dark Mode -->
+            <label class="switch switch_outlined" data-toggle="tooltip" data-tippy-content="Toggle Dark Mode">
+                <input id="darkModeToggler" type="checkbox">
+                <span></span>
+            </label>
+
+            <!-- Fullscreen -->
+            <button id="fullScreenToggler" type="button" class="hidden lg:inline-block btn-link ltr:ml-3 rtl:mr-3 px-2 text-2xl leading-none la la-expand-arrows-alt" data-toggle="tooltip" data-tippy-content="Fullscreen"></button>
+
+            <!-- Notifications -->
+            <div class="dropdown self-stretch">
+                <button type="button" class="relative flex items-center h-full btn-link ltr:ml-1 rtl:mr-1 px-2 text-2xl leading-none la la-bell" data-toggle="custom-dropdown-menu" data-tippy-arrow="true" data-tippy-placement="bottom-end">
+                    <span
+                        class="absolute top-0 right-0 rounded-full border border-primary -mt-1 -mr-1 px-2 leading-tight text-xs font-body text-primary">3</span>
+                </button>
+                <div class="custom-dropdown-menu">
+                    <div class="flex items-center px-5 py-2">
+                        <h5 class="mb-0 uppercase">Notifications</h5>
+                        <button class="btn btn_outlined btn_warning uppercase ltr:ml-auto rtl:mr-auto">Clear All</button>
+                    </div>
+                    <hr>
+                    <div class="p-5 hover:bg-primary-100 dark:hover:bg-primary-900">
+                        <a href="#">
+                            <h6 class="uppercase">Heading One</h6>
+                        </a>
+                        <p>Lorem ipsum dolor, sit amet consectetur.</p>
+                        <small>Today</small>
+                    </div>
+                    <hr>
+                    <div class="p-5 hover:bg-primary-100 dark:hover:bg-primary-900">
+                        <a href="#">
+                            <h6 class="uppercase">Heading Two</h6>
+                        </a>
+                        <p>Mollitia sequi dolor architecto aut deserunt.</p>
+                        <small>Yesterday</small>
+                    </div>
+                    <hr>
+                    <div class="p-5 hover:bg-primary-100 dark:hover:bg-primary-900">
+                        <a href="#">
+                            <h6 class="uppercase">Heading Three</h6>
+                        </a>
+                        <p>Nobis reprehenderit sed quos deserunt</p>
+                        <small>Last Week</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Menu -->
+            <div class="dropdown">
+                <button class="flex items-center ltr:ml-4 rtl:mr-4 text-gray-700" data-toggle="custom-dropdown-menu" data-tippy-arrow="true" data-tippy-placement="bottom-end">
+                    <span class="avatar">JD</span>
+                </button>
+                <div class="custom-dropdown-menu w-64">
+                    <div class="p-5">
+                        <h5 class="uppercase">John Doe</h5>
+                        <p>Editor</p>
+                    </div>
+                    <hr>
+                    <div class="p-5">
+                        <a href="#" class="flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary">
+                            <span class="la la-user-circle text-2xl leading-none ltr:mr-2 rtl:ml-2"></span> View Profile
+                        </a>
+                        <a href="#" class="flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary mt-5">
+                            <span class="la la-key text-2xl leading-none ltr:mr-2 rtl:ml-2"></span> Change Password
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="p-5">
+                        <a href="#" class="flex items-center text-gray-700 dark:text-gray-500 hover:text-primary dark:hover:text-primary">
+                            <span class="la la-power-off text-2xl leading-none ltr:mr-2 rtl:ml-2"></span> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Bar -->
+    <aside class="menu-bar menu-sticky">
+        <div class="menu-items">
+            <div class="menu-header hidden">
+                <a href="#" class="flex items-center mx-8 mt-8">
+                    <span class="avatar w-16 h-16">JD</span>
+                    <div class="ltr:ml-4 rtl:mr-4 ltr:text-left rtl:text-right text-gray-700 dark:text-gray-500">
+                        <h5>John Doe</h5>
+                        <p class="mt-2">Editor</p>
+                    </div>
+                </a>
+                <hr class="mx-8 my-4">
+            </div>
+            <a href="index.html" class="link" data-toggle="tooltip-menu" data-tippy-content="Dashboard">
+                <span class="icon la la-laptop"></span>
+                <span class="title">Dashboard</span>
+            </a>
+            <a href="posts.html" class="link active" data-toggle="tooltip-menu" data-tippy-content="Posts">
+                <span class="icon la la-pen"></span>
+                <span class="title">Posts</span>
+            </a>
+            <a href="categories.html" class="link" data-toggle="tooltip-menu" data-tippy-content="Categories">
+                <span class="icon la la-folder"></span>
+                <span class="title">Categories</span>
+            </a>
+            <a href="blank.html" class="link" data-toggle="tooltip-menu" data-tippy-content="Subscribers">
+                <span class="icon la la-user"></span>
+                <span class="title">Subscribers</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Customizer -->
+    <aside id="customizer" class="sidebar sidebar_customizer">
+
+        <!-- Toggler -->
+        <button class="sidebar-toggler" data-toggle="customizer"><span class="la la-gear animate-spin-slow"></span></button>
+
+        <!-- Theme Customizer -->
+        <div class="flex items-center justify-between h-20 p-4">
+            <div>
+                <h2>Theme Customizer</h2>
+                <p>Customize & Preview</p>
+            </div>
+            <button type="button" class="close text-2xl leading-none hover:text-primary la la-times" data-toggle="customizer"></button>
+        </div>
+        <hr>
+        <div class="overflow-y-auto">
+            <div class="flex items-center justify-between p-4">
+                <h5>Dark Mode</h5>
+                <label class="switch switch_outlined">
+                    <input data-toggle="darkMode" type="checkbox">
+                    <span></span>
+                </label>
+            </div>
+            <hr>
+            <div class="flex items-center justify-between p-4">
+                <h5>RTL</h5>
+                <label class="switch switch_outlined">
+                    <input data-toggle="rtl" type="checkbox">
+                    <span></span>
+                </label>
+            </div>
+            <hr>
+            <div class="p-4">
+                <h5>Menu Type</h5>
+                <div class="mt-5">
+                    <label class="custom-radio">
+                        <input type="radio" name="menuType" checked data-toggle="menu-type" data-value="default">
+                        <span></span>
+                        <span>Default</span>
+                    </label>
+                    <label class="custom-radio mt-2">
+                        <input type="radio" name="menuType" data-toggle="menu-type" data-value="hidden">
+                        <span></span>
+                        <span>Hidden</span>
+                    </label>
+                    <label class="custom-radio mt-2">
+                        <input type="radio" name="menuType" data-toggle="menu-type" data-value="icon-only">
+                        <span></span>
+                        <span>Icon Only</span>
+                    </label>
+                    <label class="custom-radio mt-2">
+                        <input type="radio" name="menuType" data-toggle="menu-type" data-value="wide">
+                        <span></span>
+                        <span>Wide</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Workspace -->
+    <main class="workspace overflow-hidden">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <h1>Blog Posts</h1>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li>Edit Post</li>
+            </ul>
+        </section>
+
+        <div class="lg:flex lg:-mx-4">
+
+            <!-- Content -->
+            <div class="lg:w-1/2 xl:w-3/4 lg:px-4">
+                <div class="card p-5">
+                    <form>
+                        <div class="mb-5 xl:w-1/2">
+                            <label class="label block mb-2" for="title">Title</label>
+                            <input id="title" type="text" class="form-control">
+                        </div>
+                        <div class="mb-5 xl:w-1/2">
+                            <label class="label block mb-2" for="slug">Slug</label>
+                            <input id="slug" type="text" class="form-control">
+                        </div>
+                        <div class="mb-5">
+                            <label class="label block mb-2" for="content">Content</label>
+                            <textarea id="content" class="form-control" rows="16"></textarea>
+                        </div>
+                        <div class="xl:w-1/2">
+                            <label class="label block mb-2" for="excerpt">Excerpt</label>
+                            <textarea id="excerpt" class="form-control" rows="8"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Recent -->
+            <div class="lg:w-1/2 xl:w-1/4 lg:px-4 pt-5 lg:pt-0">
+                <div class="relative card p-5">
+                    <h3>Setting</h3>
+                    <form class="mt-5">
+                        <div class="flex items-center">
+                            <div class="w-1/4">
+                                <label class="label block">Status</label>
+                            </div>
+                            <div class="w-3/4 ml-2">
+                                <div class="custom-select">
+                                    <select class="form-control">
+                                        <option>Published</option>
+                                        <option>Draft</option>
+                                    </select>
+                                    <div class="custom-select-icon la la-caret-down"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-5">
+                            <div class="w-1/4">
+                                <label class="label block">Visibility</label>
+                            </div>
+                            <div class="w-3/4 ml-2">
+                                <div class="custom-select">
+                                    <select class="form-control">
+                                        <option>Public</option>
+                                        <option>Option</option>
+                                    </select>
+                                    <div class="custom-select-icon la la-caret-down"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mt-5">
+                        <button class="btn btn_primary mt-5 ltr:mr-2 rtl:ml-2 uppercase">Save Changes</button>
+                        <button class="btn btn_outlined btn_secondary mt-5 uppercase">Discard</button>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="card mt-5 p-5">
+                    <h3>Categories</h3>
+                    <div class="tabs">
+                        <nav class="tab-nav mt-5">
+                            <button class="nav-link h5 uppercase active" data-toggle="tab" data-target="#tab-1">Most
+                                Used</button>
+                            <button class="nav-link h5 uppercase" data-toggle="tab" data-target="#tab-2">All
+                                Categories</button>
+                        </nav>
+                        <div class="tab-content mt-5">
+                            <div id="tab-1" class="collapse open">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    <span>Uncategorized</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>Recent</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>Featured</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>Trending</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>International</span>
+                                </label>
+                            </div>
+                            <div id="tab-2" class="collapse">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    <span>Uncategorized</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>Recent</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>Featured</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>Trending</span>
+                                </label>
+                                <label class="custom-checkbox mt-2">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <span>International</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="card mt-5 p-5">
+                    <h3>Tags</h3>
+                    <form class="mt-5">
+                        <label class="form-control-addon-within flex-row-reverse">
+                            <input type="text" class="form-control ltr:pl-2 rtl:pr-2 border-none w-full"
+                                placeholder="Enter a tag">
+                            <span class="flex items-center ltr:pl-4 rtl:pr-4">
+                                <span class="badge badge_primary">
+                                    tag
+                                    <button type="button"
+                                        class="focus:outline-none ltr:ml-1 rtl:mr-1 la la-times"></button>
+                                </span>
+                            </span>
+                        </label>
+                        <small class="block mt-2">Seperate tags with commas</small>
+                    </form>
+                </div>
+
+                <!-- Featured Image -->
+                <div class="card mt-5 p-5">
+                    <h3>Featured Image</h3>
+                    <input type="file" class="form-control mt-5">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-auto">
+            <div class="footer">
+                <span class='uppercase'>&copy; <span id="year"></span> Minimal Blog</span>
+                <nav class="ltr:ml-auto rtl:mr-auto">
+                    <a href="mailto:Hey There<phyohan1234@gmail.com>?subject=Hello">Phyo Pyae Sone Han</a>
+                    <span class="divider">|</span>
+                    <a href="http://yetiadmin.yetithemes.net/docs" target="_blank">Docs</a>
+                </nav>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/vendor.js"></script>
+    <script src="../assets/js/chart.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1"></script> -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/filepond.min.js"></script>
+    <script>
+        // Get a reference to the file input element
+        const inputElement = document.querySelector('input[type="file"]');
+
+        // Create a FilePond instance
+        const pond = FilePond.create(inputElement);
+
+        //Current Year
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
+</body>
+
+
+</html>

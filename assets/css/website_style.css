@@ -1,0 +1,98 @@
+::selection {
+    background: #bed4ff !important;
+}
+
+.modal-style {
+    border-radius: 14px;
+    height: 25rem;
+}
+
+.back-btn {
+    color: #646369;
+    position: absolute;
+    padding: 0 10px;
+    height: 41px;
+    line-height: 51px;
+    text-align: center;
+    z-index: 2;
+    font-size: 23px;
+    right: 10px;
+    left: auto;
+    cursor: pointer;
+}
+
+.modal-my-photo {
+    background-image: url(../../images/modal-photo.png);
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 30px;
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    font-weight: 900;
+    font-family: Inter, sans-serif;
+    text-align: center;
+}
+
+.paragraph {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.3em;
+    color: #646369;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    padding: 0px;
+}
+
+.button {
+    margin: 0 8px;
+    width: 46px;
+    height: 46px;
+    padding: 0px;
+    color: #000;
+    box-shadow: inset rgb(0 0 0 / 15%) 0 0 0 1px;
+    background: 0 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 23px;
+    align-items: center;
+}
+
+.button:hover {
+    transition: 1000ms;
+    box-shadow: inset rgb(0 0 0 / 45%) 0 0 0 1px;
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+.rounded-14 {
+    border-radius: 14px;
+}
+
+
+/* Phone View */
+
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .paragraph {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .welcome {
+        visibility: hidden;
+    }
+}
